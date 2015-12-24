@@ -1,4 +1,4 @@
-# refapp-devops
+# Devops Reference App
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar refapp-devops-0.1.0-standalone.jar [args]
+    $ java -jar refapp-0.1.0-standalone.jar [args]
 
 ## Options
 

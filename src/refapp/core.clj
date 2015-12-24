@@ -1,4 +1,4 @@
-(ns refapp-devops.core
+(ns refapp.core
   (:gen-class))
 
 (defn -main

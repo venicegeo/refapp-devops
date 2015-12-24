@@ -1,6 +1,6 @@
-(ns refapp-devops.core-test
+(ns refapp.core-test
   (:require [clojure.test :refer :all]
-            [refapp-devops.core :refer :all]))
+            [refapp.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
