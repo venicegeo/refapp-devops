@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP=refapp-devops
-EXT=jar
+EXT=war
 SHA=$(git rev-parse HEAD)
 SHORT=$(git rev-parse --short HEAD)
 ARTIFACT="$SHA.$EXT"
