@@ -8,6 +8,8 @@ popd > /dev/null
 source $base/vars.sh
 
 # do we have this artifact in s3? If not, fail.
-[ -f $ARTIFACT ] || { aws s3 ls $S3URL && aws s3 cp $S3URL ./$ARTIFACT || exit 1 }
+[ -f $ARTIFACT ] || { aws s3 ls $S3URL && aws s3 cp $S3URL ./$ARTIFACT || exit 1; }
 
 cf push -p ./$ARTIFACT
+
+rm ./$ARTIFACT
