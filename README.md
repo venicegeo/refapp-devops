@@ -60,7 +60,6 @@
 ## TODO
 
 - pipelines (and pipeline views)
-- connect Jenkins to CF
 - containers
 - b/g deploys
 - diagram
