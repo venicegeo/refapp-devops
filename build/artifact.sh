@@ -5,10 +5,10 @@ base=$(pwd -P)
 popd > /dev/null
 
 # this step builds our artifact
-lein do clean, uberjar
+lein do clean, ring uberwar
 
 # the path where the artifact is
-jarfile=$base/../target/uberjar/refapp-0.1.0-standalone.jar
+jarfile=$base/../target/uberjar/refapp-0.1.0-standalone.war
 
 # gather some data about the repo
 source $base/vars.sh
