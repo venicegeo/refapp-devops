@@ -1,3 +1,2 @@
 applications:
 - name: refapp-devops
-  path: target/uberjar/refapp-0.1.0-standalone.war

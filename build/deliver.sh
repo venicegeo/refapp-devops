@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 pushd `dirname $0` > /dev/null
 base=$(pwd -P)
@@ -8,8 +8,4 @@ popd > /dev/null
 source $base/vars.sh
 
 # do we have this artifact in s3? If not, fail.
-[ -f $ARTIFACT ] || { aws s3 ls $S3URL && aws s3 cp $S3URL ./$ARTIFACT || exit 1; }
-
-cf push -p ./$ARTIFACT
-
-rm ./$ARTIFACT
+[ -f $base/../$ARTIFACT ] || { aws s3 ls $S3URL && aws s3 cp $S3URL $base/../$ARTIFACT || exit 1; }
