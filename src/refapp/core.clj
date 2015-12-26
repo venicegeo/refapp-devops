@@ -8,4 +8,4 @@
    :body "Hello world."})
 
 (defn -main []
-  (jetty/run-jetty handler {:port 80}))
+  (jetty/run-jetty handler {:port 8080}))
