@@ -8,4 +8,4 @@ popd > /dev/null
 source $base/vars.sh
 
 # do we have this artifact in s3? If not, fail.
-[ -f $base/../$ARTIFACT ] || { aws s3 ls $S3URL && aws s3 cp $S3URL $base/../$ARTIFACT || exit 1; }
+[ -f $base/../deliver.war ] || { aws s3 ls $S3URL && aws s3 cp $S3URL $base/../deliver.war || exit 1; }
