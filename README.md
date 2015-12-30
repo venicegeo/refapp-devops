@@ -10,6 +10,8 @@
   - all scripts must return zero or nonzero
   - use the job keyword `cf-deliver` to automate a CloudFoundry deploy.
 
+1. Create a `manifest.yml` file to control CloudFoundry deploys.
+
 1. Add project to the [Jenkins seed script](https://github.com/venicegeo/jenkins):
     ```
     def projects = [
