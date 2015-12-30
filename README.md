@@ -5,29 +5,24 @@
 1. Connect github repo to jenkins.
   - `Settings -> Webhooks & Services -> Services -> Add service -> Jenkins (GitHub plugin)`
 
-1. Write scripts for jenkins to run.
-  - under /build:
-    - setup.sh
-    - build.sh
-    - build-test.sh
-    - artifact.sh
-    - artifact-test.sh
-    - deploy.sh
-    - teardown.sh
-    - (all scripts return zero or nonzero, optionally generate a xxx.log file and an xxx.xml for xUnit)
+1. Write scripts for jenkins to run in the scripts directory.
+  - follow the convention of `<job-name>.sh`
+  - all scripts must return zero or nonzero
+  - use the job keyword `cf-deliver` to automate a CloudFoundry deploy.
 
 1. Add project to the [Jenkins seed script](https://github.com/venicegeo/jenkins):
     ```
     def projects = [
-      [name: 'refapp-devops', jobs: ['setup', 'artifact', 'build-test']]
+      [name: 'refapp-devops', jobs: ['setup', 'artifact', 'cf-deliver']]
     ]
     ```
   - *`name` corresponds to the project name as it appears in github; `jobs` is a list of steps for the repository.*
+  - the collection of steps will form a build pipeline that will process serially.
   - [Jenkins](http://jenkins.piazzageo.io) will generate new jobs once the changes to the seed script are committed and pushed.
 
 
 
-## Build Steps
+## Sample Build Steps
 
 ### Setup
 
@@ -48,9 +43,7 @@
 - `artifact-test.sh`
   - testing of the artifact
 
-- - -
-
-- `stage.sh`
+- `cf-deliver.sh`
   - push to cloudfoundry
 
 - `teardown.sh`
@@ -59,7 +52,7 @@
 
 ## TODO
 
-- pipelines (and pipeline views)
-- containers
+- containers?
+- iterate on project definiton (jenkins.yml file in repo)
 - b/g deploys
 - diagram
