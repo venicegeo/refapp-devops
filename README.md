@@ -1,6 +1,6 @@
 # Devops Reference App
 
-A sample build pipeline using the VeniceGEO devops infrastructure. Ignore the Clojure `src` and `test` files: they just create a simple "hello world" web server. The intresting bits:
+A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs.google.com/drawings/d/1ulbWSQQL5CzveHTtUxiN0eZsDWPrH3QzbggqoVo4MZE/edit?usp=sharing). Ignore the Clojure `src` and `test` files: they just create a simple "hello world" web server. The intresting bits:
   - `./scripts/*`: outline each step in the devlops pipeline.
   - `./manifest.yml`: controls the CloudFoundry deployment.
 
@@ -50,7 +50,6 @@ A sample build pipeline using the VeniceGEO devops infrastructure. Ignore the Cl
 ## TODO
 
 - full explanation of services (+ a tl;dr)
-- diagram
 - solidify naming conventions
 - create roadmap
   - cf users?
