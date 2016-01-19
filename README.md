@@ -8,6 +8,7 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
 
 1. Connect github repo to jenkins.
   - `Settings -> Webhooks & Services -> Services -> Add service -> Jenkins (GitHub plugin)`
+  - Webhook URL: `http://jenkins.piazzageo.io/github-webhook/`
 
 1. Write scripts for jenkins to run in the `./scripts` directory.
   - follow the convention of `<job-name>.sh`
