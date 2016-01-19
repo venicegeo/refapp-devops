@@ -14,6 +14,7 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
   - follow the convention of `<job-name>.sh`
   - all scripts must return zero or nonzero
   - use the job-name keyword `cf-deliver` to automate a CloudFoundry deploy.
+  - (make sure the scripts are executeable)
 
 1. Create a `manifest.yml` file to control CloudFoundry deploys.
 
