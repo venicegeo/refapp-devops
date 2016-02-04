@@ -1,6 +1,6 @@
 applications:
-- name: refapp-devops-${BUILD_NUMBER}-${GIT_REVISION}
-  host: refapp-devops-${BUILD_NUMBER}-${GIT_REVISION}
+- name: refapp-devops-${GIT_REVISION}
+  host: refapp-devops-${GIT_REVISION}
   path: app.war
   memory: 512M
   instances: 1
