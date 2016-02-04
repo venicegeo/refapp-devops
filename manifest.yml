@@ -1,6 +1,6 @@
 applications:
-- name: refapp-devops.#{BUILD_NUMBER}
-  host: refapp-devops.#{BUILD_NUMBER}
+- name: refapp-devops.${BUILD_NUMBER}
+  host: refapp-devops.${BUILD_NUMBER}
   path: app.war
   memory: 512M
   instances: 1
