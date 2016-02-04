@@ -51,6 +51,7 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
 
 ## TODO
 
+- major documentation effort
 - full explanation of services (+ a tl;dr)
 - solidify naming conventions
 - create roadmap
