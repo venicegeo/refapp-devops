@@ -59,4 +59,3 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
   - tunneling
   - containers?
   - iterate on project definiton (jenkins.yml file in repo)
-  - b/g deploys / promotion model
