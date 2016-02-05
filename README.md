@@ -18,9 +18,9 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
 
 1. Create a `manifest.yml` file to control CloudFoundry deploys.
 
-1. Add project to the [Jenkins seed script](https://github.com/venicegeo/jenkins):
+1. Add project to the [Jenkins ProjectMap script](https://github.com/venicegeo/jenkins):
     ```
-    def projects = [
+    static projects = [
       [name: 'refapp-devops', jobs: ['setup', 'artifact', 'cf-deliver']]
     ]
     ```
