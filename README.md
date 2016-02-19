@@ -21,39 +21,19 @@ A sample build pipeline using the [VeniceGEO devops infrastructure](https://docs
 1. Add project to the [Jenkins ProjectMap script](https://github.com/venicegeo/jenkins):
     ```
     static projects = [
-      [name: 'refapp-devops', jobs: ['setup', 'artifact', 'cf-deliver']]
+      [name: 'refapp-devops', jobs: ['setup', 'archive', 'cf-deliver']]
     ]
     ```
   - *`name` corresponds to the project name as it appears in github; `jobs` is a list of steps for the repository.*
   - the collection of steps will form a build pipeline that will process serially.
   - [Jenkins](http://jenkins.piazzageo.io) will generate new jobs once the changes to the seed script are committed and pushed.
 
-
-## Suggested Build Steps
-
-- `setup.sh`
-  - dependency resolution
-  - static code analysis
-- `build.sh`
-  - compilation
-- `build-test.sh`
-  - unit tests
-- `artifact.sh`
-  - create runtime artifact (container?)
-  - upload artifact to S3.
-- `artifact-test.sh`
-  - testing of the artifact
-- `cf-deliver.sh`
-  - push to cloudfoundry
-- `teardown.sh`
-  - remove from cloudfoundry
-
-
 ## TODO
 
 - major documentation effort
 - full explanation of services (+ a tl;dr)
 - solidify naming conventions
+- nexus
 - create roadmap
   - cf users?
   - tunneling
